@@ -49,6 +49,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Day10\Day10.csproj">
+      <Project>{82a21f78-0cec-44f1-b457-375d807abe66}</Project>
+      <Name>Day10</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Day1\Day1.csproj">
       <Project>{a560c050-02a3-4b7b-8e56-ac4d3792c9ac}</Project>
       <Name>Day1</Name>
@@ -80,6 +84,10 @@
     <ProjectReference Include="..\Day8\Day8.csproj">
       <Project>{3b7998d5-5db1-40a0-8b96-eeec65aab265}</Project>
       <Name>Day8</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Day9\Day9.csproj">
+      <Project>{8d8c397b-a954-49cf-a728-605668d3b9bf}</Project>
+      <Name>Day9</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

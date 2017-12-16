@@ -23,6 +23,10 @@ namespace AdventOfCode2017
             Day7.Program.Solution();
             Console.WriteLine("Day eight solution:");
             Day8.Program.Solution();
+            Console.WriteLine("Day nine solution:");
+            Day9.Program.Solution();
+            Console.WriteLine("Day ten solution:");
+            Day10.Program.Solution();
         }
     }
 }
