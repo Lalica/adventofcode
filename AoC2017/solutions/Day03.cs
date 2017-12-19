@@ -19,14 +19,29 @@ namespace AoC2017.solutions
             int lastValue = 1;
             int counter = 0;
             int sideLength = 3;
-            while (lastValue < int.Parse(s))
+            while (lastValue <= int.Parse(s))
             {
                 lastValue = sideLength * sideLength;
                 counter++;
                 sideLength += 2;
             }
-            sideLength -= 2;
-            int sum1 = (sideLength - 1) / 2 - (int.Parse(s) - (lastValue - sideLength + 1)) + counter;
+            int k = counter, sum1 = 0;
+            while (k >= -counter)
+            {
+                int check = 0;
+                for (int j = counter; j >= -counter; j--)
+                {
+                    if (lastValue == int.Parse(s))
+                    {
+                        sum1 = k + j;
+                        check = 1;
+                        break;
+                    }
+                    lastValue--;
+                }
+                if (check == 1) break;
+                k--;
+            }
             Console.WriteLine("Part one: " + sum1);
 
             //Part two
