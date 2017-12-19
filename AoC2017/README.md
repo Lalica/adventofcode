@@ -5,10 +5,10 @@ Using c#
 | :-: | :--------: | :--------: | ------- |
 | 1 | 1141 | 950 | Final |
 | 2 | 21845 | 191 | Final |
-| 3 | 326 | 363010 | Wrong solution 1 in code |
+| 3 | 326 | 363010 | Final |
 | 4 | 383 | 265 | Final |
 | 5 | 343467 | 24774780 | Final |
-| 6 | 6681 | 2392 | Needs polish |
+| 6 | 6681 | 2392 | Final |
 | 7 | xegshds | 299 | Needs polish |
 | 8 | 3612 | 3818 | Needs polish |
 | 9 | 10616 | 5101 | Final |
