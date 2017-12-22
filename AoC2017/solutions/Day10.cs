@@ -12,14 +12,13 @@ namespace AoC2017.solutions
         public static void Solution()
         {
             string s;
-            string[] separators = { "," };
             using (StreamReader sr = File.OpenText(Path.Combine(Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName, "inputs/input10.txt")))
             {
                 s = sr.ReadLine();
             }
 
             //Part1
-            string[] lenghts = s.Split(separators, StringSplitOptions.RemoveEmptyEntries);
+            string[] lenghts = s.Split(',');
             int skipSize = 0, currentPosition = 0; ;
             int[] list = new int[256];
             for (int i = 0; i < list.Length; i++)
@@ -42,7 +41,12 @@ namespace AoC2017.solutions
             }
             int sum1 = list[0] * list[1];
 
-            //Part2
+            Console.WriteLine("Part one: " + sum1);
+            Console.WriteLine("Part two: " + KnotHash(s));
+        }
+
+        public static string KnotHash(string s)
+        {
             char[] chars = s.ToCharArray();
             int[] lenghts2 = new int[chars.Length + 5];
             int skipSize2 = 0, currentPosition2 = 0;
@@ -77,7 +81,7 @@ namespace AoC2017.solutions
                     skipSize2++;
                 }
             }
-            String denseHash = "";
+            string denseHash = "";
             for (int i = 0; i < 16; i++)
             {
                 int num = 0;
@@ -87,9 +91,7 @@ namespace AoC2017.solutions
                 }
                 denseHash += num.ToString("X2");
             }
-
-            Console.WriteLine("Part one: " + sum1);
-            Console.WriteLine("Part two: " + denseHash.ToLower());
+            return denseHash.ToLower();
         }
     }
 }
