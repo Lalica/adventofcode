@@ -45,8 +45,11 @@ namespace AoC2017
             //Console.WriteLine("Day fourteen solution:");
             //Day14.Solution();
             //Console.WriteLine();
-            Console.WriteLine("Day fifteen solution:");
-            Day15.Solution();
+            //Console.WriteLine("Day fifteen solution:");
+            //Day15.Solution();
+            //Console.WriteLine();
+            Console.WriteLine("Day sixteen solution:");
+            Day16.Solution();
             Console.WriteLine();
         }
     }
