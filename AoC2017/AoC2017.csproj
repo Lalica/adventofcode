@@ -58,6 +58,7 @@
     <Compile Include="solutions\Day15.cs" />
     <Compile Include="solutions\Day16.cs" />
     <Compile Include="solutions\Day17.cs" />
+    <Compile Include="solutions\Day18.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -79,6 +80,14 @@
     <Content Include="inputs\input06.txt" />
     <Content Include="inputs\input07.txt" />
     <Content Include="inputs\input17.txt" />
+    <Content Include="inputs\input18.txt" />
+    <Content Include="inputs\input19.txt" />
+    <Content Include="inputs\input20.txt" />
+    <Content Include="inputs\input21.txt" />
+    <Content Include="inputs\input22.txt" />
+    <Content Include="inputs\input23.txt" />
+    <Content Include="inputs\input24.txt" />
+    <Content Include="inputs\input25.txt" />
     <Content Include="inputs\input7_mislav.txt" />
     <Content Include="inputs\input08.txt" />
     <Content Include="inputs\input09.txt" />
