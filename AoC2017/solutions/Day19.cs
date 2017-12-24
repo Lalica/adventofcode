@@ -15,94 +15,47 @@ namespace AoC2017.solutions
                 path = sr.ReadToEnd().Split('\n');
             }
 
-            int i = 0, part2 = 0, j = path[0].IndexOf("|");
+            int i = 1, part2 = 1, j = path[0].IndexOf("|");
             string part1 = "";
             char currentDirection = 'd';
-            bool check = false;
             while (true)
             {
-                if (check) break;
+                if (path[i][j] == ' ')
+                {
+                    break;
+                }
+                part2++;
+                if (char.IsLetter(path[i][j]))
+                {
+                    part1 += path[i][j];
+                }
+                if (path[i][j] == '+')
+                {
+                    if (currentDirection == 'd' || currentDirection == 'u')
+                    {
+                        currentDirection = path[i][j + 1] == '-' ? 'r' : 'l';
+                        j = j + (path[i][j + 1] == '-' ? 1 : -1);
+                    }
+                    else
+                    {
+                        currentDirection = path[i + 1][j] == '|' ? 'd' : 'u';
+                        i = i + (path[i + 1][j] == '|' ? 1 : -1);
+                    }
+                    part2++;
+                }
                 switch (currentDirection)
                 {
                     case 'd':
-                        while (path[i][j] != '+')
-                        {
-                            i++;
-                            part2++;
-                            if (char.IsLetter(path[i][j]))
-                            {
-                                part1 += path[i][j];
-                            }
-                            if (path[i][j] == ' ')
-                            {
-                                check = true;
-                                break;
-                            }
-                        }
-                        if (check) break;
-                        part2++;
-                        currentDirection = path[i][j + 1] == '-' ? 'r' : 'l';
-                        j = j + (path[i][j + 1] == '-' ? 1 : -1);
+                        i++;
                         continue;
                     case 'u':
-                        while (path[i][j] != '+')
-                        {
-                            i--;
-                            part2++;
-                            if (char.IsLetter(path[i][j]))
-                            {
-                                part1 += path[i][j];
-                            }
-                            if (path[i][j] == ' ')
-                            {
-                                check = true;
-                                break;
-                            }
-                        }
-                        if (check) break;
-                        part2++;
-                        currentDirection = path[i][j + 1] == '-' ? 'r' : 'l';
-                        j = j + (path[i][j + 1] == '-' ? 1 : -1);
+                        i--;
                         continue;
                     case 'r':
-                        while (path[i][j] != '+')
-                        {
-                            j++;
-                            part2++;
-                            if (char.IsLetter(path[i][j]))
-                            {
-                                part1 += path[i][j];
-                            }
-                            if (path[i][j] == ' ')
-                            {
-                                check = true;
-                                break;
-                            }
-                        }
-                        if (check) break;
-                        part2++;
-                        currentDirection = path[i+1][j] == '|' ? 'd' : 'u';
-                        i = i + (path[i+1][j] == '|' ? 1 : -1);
+                        j++;
                         continue;
                     case 'l':
-                        while (path[i][j] != '+')
-                        {
-                            j--;
-                            part2++;
-                            if (path[i][j] >= 'A' && path[i][j] <= 'Z')
-                            {
-                                part1 += path[i][j];
-                            }
-                            if (path[i][j] == ' ')
-                            {
-                                check = true;
-                                break;
-                            }
-                        }
-                        if (check) break;
-                        part2++;
-                        currentDirection = path[i + 1][j] == '|' ? 'd' : 'u';
-                        i = i + (path[i + 1][j] == '|' ? 1 : -1);
+                        j--;
                         continue;
                 }
             }
