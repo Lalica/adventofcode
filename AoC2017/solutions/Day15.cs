@@ -18,7 +18,6 @@ namespace AoC2017.solutions
                 s = sr.ReadLine().Split(' ');
                 firstB = int.Parse(s[s.Length - 1]);
             }
-
             int lastValueA = firstA, lastValueB = firstB;
             for (int i = 0; i < 40000000; i++)
             {
@@ -49,7 +48,6 @@ namespace AoC2017.solutions
         {
             while (true)
             {
-
                 prev = (int) (((long) prev * cons) % 2147483647);
                 if (prev % mod == 0)
                 {
