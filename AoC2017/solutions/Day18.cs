@@ -19,9 +19,11 @@ namespace AoC2017.solutions
 
             long last = 0;
             long o1, o2=0, i=0;
+            bool check = false;
             Dictionary<string, long> regs= new Dictionary<string, long>();
             while(i>-1 && i<instructions.Length)
             {
+                if (check) break;
                 if (!long.TryParse(instructions[i].Split(' ')[1], out o1))
                 {
                     if (!regs.ContainsKey(instructions[i].Split(' ')[1]))
@@ -38,41 +40,32 @@ namespace AoC2017.solutions
                     }
                     o2 = regs[instructions[i].Split(' ')[2]];
                 }
-                if (instructions[i].Split(' ')[0] == "snd")
+                i ++;
+                switch (instructions[i-1].Split(' ')[0])
                 {
-                    last = o1;
+                    case "snd": last = o1;
+                        continue;
+                    case "set": regs[instructions[i-1].Split(' ')[1]] = o2;
+                        continue;
+                    case "add": regs[instructions[i-1].Split(' ')[1]] += o2;
+                        continue;
+                    case "mul": regs[instructions[i-1].Split(' ')[1]] *= o2;
+                        continue;
+                    case "mod": regs[instructions[i-1].Split(' ')[1]] %= o2;
+                        continue;
+                    case "rcv":
+                        if (regs[instructions[i-1].Split(' ')[1]] != 0)
+                        {
+                            check = true;
+                        }
+                        continue;
+                    case "jgz":
+                        if (o1 > 0)
+                        {
+                            i = i + o2 - 1;
+                        }
+                        continue;
                 }
-                else if (instructions[i].Split(' ')[0] == "set")
-                {
-                    regs[instructions[i].Split(' ')[1]] = o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "add")
-                {
-                    regs[instructions[i].Split(' ')[1]] += o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "mul")
-                {
-                    regs[instructions[i].Split(' ')[1]] *= o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "mod")
-                {
-                    regs[instructions[i].Split(' ')[1]] %= o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "rcv")
-                {
-                    if (regs[instructions[i].Split(' ')[1]] != 0)
-                    {
-                        break;
-                    }
-                }
-                else if (instructions[i].Split(' ')[0] == "jgz")
-                {
-                    if (o1 > 0)
-                    {
-                        i = i + o2 - 1;
-                    }
-                }
-                i++;
             }
             List<long> queue0 = new List<long>();
             List<long> queue1 = new List<long>();
@@ -111,47 +104,43 @@ namespace AoC2017.solutions
                     }
                     o2 = regs[instructions[i].Split(' ')[2]];
                 }
-                if (instructions[i].Split(' ')[0] == "snd")
-                {
-                    otherQueue.Add(o1);
-                }
-                else if (instructions[i].Split(' ')[0] == "set")
-                {
-                    regs[instructions[i].Split(' ')[1]] = o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "add")
-                {
-                    regs[instructions[i].Split(' ')[1]] += o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "mul")
-                {
-                    regs[instructions[i].Split(' ')[1]] *= o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "mod")
-                {
-                    regs[instructions[i].Split(' ')[1]] %= o2;
-                }
-                else if (instructions[i].Split(' ')[0] == "rcv")
-                {
-                    DateTime start = DateTime.Now;
-                    while (myQueue.Count < last+1)
-                    {
-                        if ((DateTime.Now - start).Seconds > 20)
-                        {
-                            return;
-                        }
-                    }
-                    regs[instructions[i].Split(' ')[1]] = myQueue[last];
-                    last++;
-                }
-                else if (instructions[i].Split(' ')[0] == "jgz")
-                {
-                    if (o1 > 0)
-                    {
-                        i = i + o2 - 1;
-                    }
-                }
                 i++;
+                switch (instructions[i - 1].Split(' ')[0])
+                {
+                    case "snd":
+                        otherQueue.Add(o1);
+                        continue;
+                    case "set":
+                        regs[instructions[i - 1].Split(' ')[1]] = o2;
+                        continue;
+                    case "add":
+                        regs[instructions[i - 1].Split(' ')[1]] += o2;
+                        continue;
+                    case "mul":
+                        regs[instructions[i - 1].Split(' ')[1]] *= o2;
+                        continue;
+                    case "mod":
+                        regs[instructions[i - 1].Split(' ')[1]] %= o2;
+                        continue;
+                    case "rcv":
+                        DateTime start = DateTime.Now;
+                        while (myQueue.Count < last + 1)
+                        {
+                            if ((DateTime.Now - start).Seconds > 1)
+                            {
+                                return;
+                            }
+                        }
+                        regs[instructions[i-1].Split(' ')[1]] = myQueue[last];
+                        last++;
+                        continue;
+                    case "jgz":
+                        if (o1 > 0)
+                        {
+                            i = i + o2 - 1;
+                        }
+                        continue;
+                }
             }
         }
     }
