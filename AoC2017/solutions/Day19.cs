@@ -15,24 +15,13 @@ namespace AoC2017.solutions
                 path = sr.ReadToEnd().Split('\n');
             }
 
-            int i = 0, j=0;
+            int i = 0, part2 = 0, j = path[0].IndexOf("|");
             string part1 = "";
-            int part2 = 0;
             char currentDirection = 'd';
             bool check = false;
-            while (j < path[0].Length)
-            {
-                if (path[0][j++] == '|')
-                {
-                    break;
-                }
-            }
             while (true)
             {
-                if (check)
-                {
-                    break;
-                }
+                if (check) break;
                 switch (currentDirection)
                 {
                     case 'd':
@@ -40,7 +29,7 @@ namespace AoC2017.solutions
                         {
                             i++;
                             part2++;
-                            if (path[i][j] >= 'A' && path[i][j] <= 'Z')
+                            if (char.IsLetter(path[i][j]))
                             {
                                 part1 += path[i][j];
                             }
@@ -50,28 +39,17 @@ namespace AoC2017.solutions
                                 break;
                             }
                         }
-                        if (check)
-                        {
-                            break;
-                        }
+                        if (check) break;
                         part2++;
-                        if (path[i][j + 1] == '-')
-                        {
-                            currentDirection = 'r';
-                            j++;
-                        }
-                        else if (path[i][j - 1] == '-')
-                        {
-                            currentDirection = 'l';
-                            j--;
-                        }
+                        currentDirection = path[i][j + 1] == '-' ? 'r' : 'l';
+                        j = j + (path[i][j + 1] == '-' ? 1 : -1);
                         continue;
                     case 'u':
                         while (path[i][j] != '+')
                         {
                             i--;
                             part2++;
-                            if (path[i][j] >= 'A' && path[i][j] <= 'Z')
+                            if (char.IsLetter(path[i][j]))
                             {
                                 part1 += path[i][j];
                             }
@@ -81,28 +59,17 @@ namespace AoC2017.solutions
                                 break;
                             }
                         }
-                        if (check)
-                        {
-                            break;
-                        }
+                        if (check) break;
                         part2++;
-                        if (path[i][j + 1] == '-')
-                        {
-                            currentDirection = 'r';
-                            j++;
-                        }
-                        else if (path[i][j - 1] == '-')
-                        {
-                            currentDirection = 'l';
-                            j--;
-                        }
+                        currentDirection = path[i][j + 1] == '-' ? 'r' : 'l';
+                        j = j + (path[i][j + 1] == '-' ? 1 : -1);
                         continue;
                     case 'r':
                         while (path[i][j] != '+')
                         {
                             j++;
                             part2++;
-                            if (path[i][j] >= 'A' && path[i][j] <= 'Z')
+                            if (char.IsLetter(path[i][j]))
                             {
                                 part1 += path[i][j];
                             }
@@ -112,21 +79,10 @@ namespace AoC2017.solutions
                                 break;
                             }
                         }
-                        if (check)
-                        {
-                            break;
-                        }
+                        if (check) break;
                         part2++;
-                        if (path[i+1][j] == '|')
-                        {
-                            currentDirection = 'd';
-                            i++;
-                        }
-                        else if (path[i-1][j] == '|')
-                        {
-                            currentDirection = 'u';
-                            i--;
-                        }
+                        currentDirection = path[i+1][j] == '|' ? 'd' : 'u';
+                        i = i + (path[i+1][j] == '|' ? 1 : -1);
                         continue;
                     case 'l':
                         while (path[i][j] != '+')
@@ -143,27 +99,31 @@ namespace AoC2017.solutions
                                 break;
                             }
                         }
-                        if (check)
-                        {
-                            break;
-                        }
+                        if (check) break;
                         part2++;
-                        if (path[i + 1][j] == '|')
-                        {
-                            currentDirection = 'd';
-                            i++;
-                        }
-                        else if (path[i - 1][j] == '|')
-                        {
-                            currentDirection = 'u';
-                            i--;
-                        }
+                        currentDirection = path[i + 1][j] == '|' ? 'd' : 'u';
+                        i = i + (path[i + 1][j] == '|' ? 1 : -1);
                         continue;
                 }
             }
-            
             Console.WriteLine("Part one: " + part1);
             Console.WriteLine("Part two: " + part2);
         }
     }
 }
+
+//Really cool reddit solution:
+//var map = GetDay(19);
+//var word = "";
+//var steps = 0;
+//Complex i = Complex.ImaginaryOne, pos = new Complex(0, map.First().IndexOf("|")), dir = new Complex(1, 0); // down
+//while (true)
+//{
+//  var itm = map[(int)pos.Real][(int)pos.Imaginary];
+//  if (itm == '+') dir *= (map[(int)(pos + dir * i).Real][(int)(pos + dir * i).Imaginary] != ' ') ? i : -i;
+//  else if (char.IsLetter(itm)) word += itm;
+//  else if (itm == ' ') break;
+//  pos += dir;
+//  steps++;
+//}
+//Console.WriteLine($"Part 1: {word}\nPart 2: {steps}");
