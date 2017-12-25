@@ -26,18 +26,15 @@ namespace AoC2017
             //Console.WriteLine("Day six solution:");
             //Day06.Solution();
             //Console.WriteLine();
-            ////make better!!
             //Console.WriteLine("Day seven solution:");
             //Day07.Solution();
             //Console.WriteLine();
-            ////make better!!
             //Console.WriteLine("Day eight solution:");
             //Day08.Solution();
             //Console.WriteLine();
             //Console.WriteLine("Day nine solution:");
             //Day09.Solution();
             //Console.WriteLine();
-            ////maybe make it better?
             //Console.WriteLine("Day ten solution:");
             //Day10.Solution();
             //Console.WriteLine();
@@ -57,9 +54,26 @@ namespace AoC2017
             //Console.WriteLine("Day eighteen solution:");
             //Day18.Solution();
             //Console.WriteLine();
-            Console.WriteLine("Day nineteen solution:");
-            Day19.Solution();
+            //Console.WriteLine("Day nineteen solution:");
+            //Day19.Solution();
+            //Console.WriteLine();
+            //Console.WriteLine("Day twenty solution:");
+            //Day20.Solution();
+            //Console.WriteLine();
+            Console.WriteLine("Day twenty one solution:");
+            Day21.Solution();
             Console.WriteLine();
+            //Console.WriteLine("Day twenty two solution:");
+            //Day22.Solution();
+            //Console.WriteLine();
+            //Console.WriteLine("Day twenty three solution:");
+            //Day23.Solution();
+            //Console.WriteLine();
+            //Console.WriteLine("Day twenty four solution:");
+            //Day24.Solution();
+            //Console.WriteLine();
+            //Console.WriteLine("Day twenty five solution:");
+            //Day25.Solution();
         }
     }
 }
