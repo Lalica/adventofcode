@@ -13,17 +13,17 @@ Using c#
 | 8 | 3612 | 3818 | Needs polish |
 | 9 | 10616 | 5101 | Final |
 | 10 | 46600 | 23234babdc6afa036749cfa9b597de1b | Maybe needs polish |
-| 11 |  |  |  |
-| 12 |  |  |  |
-| 13 |  |  |  |
+| 11 | 696 | 1461 |  |
+| 12 | 239 | 215 |  |
+| 13 | 2604 | 3941460 |  |
 | 14 | 8190 | 1134 | Final |
 | 15 | 573 | 294 | Final |
 | 16 | ebjpfdgmihonackl | abocefghijklmndp | Final |
 | 17 | 1547 | 31154878 | Final |
 | 18 | 8600 | 7239 | Maybe needs polish |
-| 19 |  |  |  |
-| 20 |  |  |  |
-| 21 |  |  |  |
+| 19 | VTWBPYAQFU | 17358 | Final |
+| 20 | 308 | 504 | Final (Part1 might not work with every input) |
+| 21 | 188 | 2758764 | Final |
 | 22 |  |  |  |
 | 23 |  |  |  |
 | 24 |  |  |  |
