@@ -23,8 +23,8 @@ Using c#
 | 18 | 8600 | 7239 | Maybe needs polish |
 | 19 | VTWBPYAQFU | 17358 | Final |
 | 20 | 308 | 504 | Final (Part1 might not work with every input) |
-| 21 | 188 | 2758764 | Final |
-| 22 |  |  |  |
+| 21 | 188 | 2758764 | Final (Slightly changed solution from reddit) |
+| 22 | 5261 | 2511927 | Final |
 | 23 |  |  |  |
 | 24 |  |  |  |
 | 25 |  |  |  |
