@@ -60,12 +60,12 @@ namespace AoC2017
             //Console.WriteLine("Day twenty solution:");
             //Day20.Solution();
             //Console.WriteLine();
-            Console.WriteLine("Day twenty one solution:");
-            Day21.Solution();
-            Console.WriteLine();
-            //Console.WriteLine("Day twenty two solution:");
-            //Day22.Solution();
+            //Console.WriteLine("Day twenty one solution:");
+            //Day21.Solution();
             //Console.WriteLine();
+            Console.WriteLine("Day twenty two solution:");
+            Day22.Solution();
+            Console.WriteLine();
             //Console.WriteLine("Day twenty three solution:");
             //Day23.Solution();
             //Console.WriteLine();
