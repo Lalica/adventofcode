@@ -14,7 +14,7 @@ Using c#
 | 9 | 10616 | 5101 | Final |
 | 10 | 46600 | 23234babdc6afa036749cfa9b597de1b | Maybe needs polish |
 | 11 | 696 | 1461 |  |
-| 12 | 239 | 215 |  |
+| 12 | 239 | 215 | Final |
 | 13 | 2604 | 3941460 |  |
 | 14 | 8190 | 1134 | Final |
 | 15 | 573 | 294 | Final |
@@ -25,6 +25,6 @@ Using c#
 | 20 | 308 | 504 | Final (Part1 might not work with every input) |
 | 21 | 188 | 2758764 | Final (Slightly changed solution from reddit) |
 | 22 | 5261 | 2511927 | Final |
-| 23 |  |  |  |
-| 24 |  |  |  |
+| 23 | 6241 | 909 | Final (help from reddit) |
+| 24 | 1859 | 1799 | Using Immutable list (nugget package) |
 | 25 |  |  |  |
