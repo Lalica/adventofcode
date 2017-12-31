@@ -13,9 +13,9 @@ Using c#
 | 8 | 3612 | 3818 | Needs polish |
 | 9 | 10616 | 5101 | Final |
 | 10 | 46600 | 23234babdc6afa036749cfa9b597de1b | Maybe needs polish |
-| 11 | 696 | 1461 |  |
+| 11 | 696 | 1461 | Final |
 | 12 | 239 | 215 | Final |
-| 13 | 2604 | 3941460 |  |
+| 13 | 2604 | 3941460 | Final |
 | 14 | 8190 | 1134 | Final |
 | 15 | 573 | 294 | Final |
 | 16 | ebjpfdgmihonackl | abocefghijklmndp | Final |
