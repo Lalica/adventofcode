@@ -27,4 +27,4 @@ Using c#
 | 22 | 5261 | 2511927 | Final |
 | 23 | 6241 | 909 | Final (help from reddit) |
 | 24 | 1859 | 1799 | Using Immutable list (nugget package) |
-| 25 |  |  |  |
+| 25 | 2832 | Yay! | Final |
