@@ -38,9 +38,9 @@ namespace AoC2017
             //Console.WriteLine("Day ten solution:");
             //Day10.Solution();
             //Console.WriteLine();
-            Console.WriteLine("Day eleven solution:");
-            Day11.Solution();
-            Console.WriteLine();
+            //Console.WriteLine("Day eleven solution:");
+            //Day11.Solution();
+            //Console.WriteLine();
             //Console.WriteLine("Day twelve solution:");
             //Day12.Solution();
             //Console.WriteLine();
@@ -80,8 +80,8 @@ namespace AoC2017
             //Console.WriteLine("Day twenty four solution:");
             //Day24.Solution();
             //Console.WriteLine();
-            //Console.WriteLine("Day twenty five solution:");
-            //Day25.Solution();
+            Console.WriteLine("Day twenty five solution:");
+            Day25.Solution();
          }
     }
 }
