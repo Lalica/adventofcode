@@ -46,8 +46,8 @@ namespace AoC2017.solutions
                 }
 
                 TuringMachine(currentState, currentPosition, steps, tape, transitions);
-                Console.Write("Part one: " + tape.Count(i => i == 1));
-                Console.Write("Part two: " + "Merry Christmas!");
+                Console.WriteLine("Part one: " + tape.Count(i => i == 1));
+                Console.WriteLine("Part two: " + "Merry Christmas!");
             }
         }
 
