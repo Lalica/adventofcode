@@ -3,11 +3,11 @@ Using python
 
 | Day | Solution 1 | Solution 2 | Comment |
 | :-: | :--------: | :--------: | ------- |
-| 1 | 232 | 1783 | rebuild in python |
-| 2 | 1606483 | 3842356 | rebuild in python |
+| 1 | 232 | 1783 | final |
+| 2 | 1606483 | 3842356 | final |
 | 3 | 2592 | 2360 | rebuild in python |
 | 4 | 117946 | 3938038 | final |
-| 5 |  |  |  |
+| 5 | 258 | 53 | final |
 | 6 |  |  |  |
 | 7 |  |  |  |
 | 8 |  |  |  |
