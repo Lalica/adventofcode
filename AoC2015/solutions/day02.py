@@ -7,8 +7,7 @@ def find_smallest(w, l, h):
 with open("../inputs/02.txt") as f:
     input = f.read().strip().splitlines()
 
-total = 0
-ribbon = 0
+total, ribbon = 0, 0
 for line in input:
     h, l, w = int(line.split('x')[0]), int(line.split('x')[1]), int(line.split('x')[2])
     smallest = find_smallest(w, l, h)
