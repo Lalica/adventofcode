@@ -36,5 +36,5 @@ for i in input:
     change(function, start, end)
     brightness(function, start, end)
 
-print("Day 5 part 1: " + str(sum([sum(i) for i in field1])))
-print("Day 5 part 2: " + str(sum([sum(i) for i in field2])))
+print("Day 6 part 1: " + str(sum([sum(i) for i in field1])))
+print("Day 6 part 2: " + str(sum([sum(i) for i in field2])))
