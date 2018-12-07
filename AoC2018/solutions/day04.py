@@ -15,8 +15,7 @@ for i in data:
             guards[gid][(fm + k) % 60] += 1
 
 s = max([sum(guards[k]) for k in guards])
-print("Day 4 part 1: " + str(next(k * guards[k].index(i) for k in guards for i in guards[k]
-                                  if i == max(guards[k]) and sum(guards[k]) == s)))
+print("Day 4 part 1: " + str(next(k * guards[k].index(max(guards[k])) for k in guards for i in guards[k] if sum(guards[k]) == s)))
 
 m = max([i for j in guards.values() for i in j])
 print("Day 4 part 2: " + str(next(k * guards[k].index(i) for k in guards for i in guards[k] if i == m)))
