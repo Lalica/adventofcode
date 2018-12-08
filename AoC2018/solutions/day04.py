@@ -1,16 +1,19 @@
+from re import findall
+
+
 data = sorted(open("../inputs/04.txt").read().strip().splitlines())
 guards, gid, fh, fm, ah, am = {}, 0, 0, 0, 0, 0
 
 for i in data:
-    d = i.split()
+    d = map(int, findall(r'\d+', i))
     if "begins" in i:
-        gid = int(d[3].strip('#'))
+        gid = d[-1]
         if not guards.get(gid):
             guards[gid] = [0 for j in range(60)]
-    if "falls" in i:
-        fh, fm = map(int, d[1].strip(']').split(':'))
-    if "wakes" in i:
-        ah, am = map(int, d[1].strip(']').split(':'))
+    elif "falls" in i:
+        fh, fm = d[3], d[4]
+    else:
+        ah, am = d[3], d[4]
         for k in range((ah - fh) * 60 + (am - fm)):
             guards[gid][(fm + k) % 60] += 1
 

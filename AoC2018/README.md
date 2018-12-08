@@ -6,7 +6,7 @@ Using python
 | 1 | 502 | 71961 | part 2 could use refactoring |
 | 2 | 6422 | qcslyvphgkrmdawljuefotxbh | final |
 | 3 | 109143 | 506 | final |
-| 4 | 85296 | 58559 | needs refactoring, could be simplified |
+| 4 | 85296 | 58559 | final |
 | 5 | 9822 | 5726 | final |
 | 6 | 5429 | 32614 | ugly, but final |
 | 7 | GRTAHKLQVYWXMUBCZPIJFEDNSO | 1115 | final |
