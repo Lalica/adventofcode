@@ -29,6 +29,7 @@ Using python
 | 24 |  |  |  |
 | 25 |  |  |  |
 
+
 **Credits:**
-* MasterMedo (suggestions for improving code structure for almost every day, hints on implementation for days 4 and 6)
+* MasterMedo (suggestions on improving code structure for almost every day, hints on implementation for days 4 and 6)
 * stewman241 (for comment: "It's not an equation question. It is a data structure question." on day 9)
