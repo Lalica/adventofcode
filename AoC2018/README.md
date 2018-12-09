@@ -11,7 +11,7 @@ Using python
 | 6 | 5429 | 32614 | ugly, but final |
 | 7 | GRTAHKLQVYWXMUBCZPIJFEDNSO | 1115 | final |
 | 8 | 48260 | 25981 | final |
-| 9 |  |  |  |
+| 9 | 375465 | 3037741441 | final, changed data structure because of reddit hint |
 | 10 |  |  |  |
 | 11 |  |  |  |
 | 12 |  |  |  |
