@@ -1,8 +1,8 @@
-import re
+from re import findall
 from collections import Counter
 
 
-data = [map(int, re.findall(r'\d+', i)) for i in open('../inputs/03.txt').read().strip().splitlines()]
+data = [map(int, findall(r'\d+', i)) for i in open('../inputs/03.txt').read().splitlines()]
 d = {}
 for l in data:
     for i in range(l[1], l[1] + l[3]):

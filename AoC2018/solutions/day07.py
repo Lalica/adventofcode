@@ -29,16 +29,18 @@ def graph(d, m1, m2, m3, workers, queue, offset, wn):
     return count, s
 
 
-data = [(i[1], i[7]) for i in map(str.split, open("../inputs/07.txt").read().strip().splitlines())]
-l1, l2, d1 = set(i[0] for i in data), set(i[1] for i in data), defaultdict(list)
-p1, p2, d2, w, q, o = set(l1), set(l2), defaultdict(list), [1, 1, 1, 1, 1], ['', '', '', '', ''], 60 - 64
+data = [(i[1], i[7]) for i in map(str.split, open("../inputs/07.txt").readlines())]
+l1, l2 = set(i[0] for i in data), set(i[1] for i in data)
+d1, d2 = defaultdict(list), defaultdict(list)
+p1, p2 = l1.copy(), l2.copy()
+w, q, o = [1]*5, ['']*5, 60 - 64
 
 for i in data:
     d1[i[1]].append(i[0])
     d2[i[1]].append(i[0])
 
 l3 = l1.difference(l2)
-p3 = set(l3)
+p3 = l3.copy()
 
 print("Day 7 part 1: " + graph(d1, l1, l2, l3, [1], [''], -100, 1)[1])
 print("Day 7 part 2: " + str(graph(d2, p1, p2, p3, w, q, o, 5)[0]))

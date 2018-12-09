@@ -1,4 +1,4 @@
-nodes = [int(i) for i in open("../inputs/08.txt").read().strip().split()]
+nodes = map(int, open("../inputs/08.txt").read().split())
 
 
 def tree2(head, part):
@@ -16,5 +16,5 @@ def tree2(head, part):
 
 
 print("Day 8 part 1: " + str(tree2(0, 1)))
-nodes = [int(i) for i in open("../inputs/08.txt").read().strip().split()]
+nodes = map(int, open("../inputs/08.txt").read().split())
 print("Day 8 part 2: " + str(tree2(0, 2)))

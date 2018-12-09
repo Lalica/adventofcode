@@ -3,7 +3,7 @@ Using python
 
 | Day | Part 1 | Part 2 | Comment |
 | :-: | :--------: | :--------: | ------- |
-| 1 | 502 | 71961 | part 2 could use refactoring |
+| 1 | 502 | 71961 | final |
 | 2 | 6422 | qcslyvphgkrmdawljuefotxbh | final |
 | 3 | 109143 | 506 | final |
 | 4 | 85296 | 58559 | final |

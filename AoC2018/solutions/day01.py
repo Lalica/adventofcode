@@ -1,4 +1,4 @@
-data = [int(x) for x in open("../inputs/01.txt").read().strip().splitlines()]
+data = map(int, open("../inputs/01.txt").readlines())
 
 print("Day 1 part 1: " + str(sum(i for i in data)))
 

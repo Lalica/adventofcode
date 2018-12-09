@@ -1,5 +1,5 @@
 from string import ascii_uppercase
-import re
+from re import sub
 
 
 def minimize(s):
@@ -15,4 +15,4 @@ def minimize(s):
 data = minimize(open("../inputs/05.txt").read().strip())
 
 print("Day 5 part 1: " + str(len(data)))
-print("Day 5 part 2: " + str(min(len(minimize(re.sub('[' + c + c.lower() + ']', '', data))) for c in ascii_uppercase)))
+print("Day 5 part 2: " + str(min(len(minimize(sub('[' + c + c.lower() + ']', '', data))) for c in ascii_uppercase)))
