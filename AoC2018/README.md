@@ -12,8 +12,8 @@ Using python
 | 7 | GRTAHKLQVYWXMUBCZPIJFEDNSO | 1115 | final |
 | 8 | 48260 | 25981 | final |
 | 9 | 375465 | 3037741441 | final, reddit hint for data structure |
-| 10 |  |  |  |
-| 11 |  |  |  |
+| 10 | GFNKCGGH | 10274 | final |
+| 11 | 44,37 | 235,87,13 | final, bartol hint for partial sums |
 | 12 |  |  |  |
 | 13 |  |  |  |
 | 14 |  |  |  |
@@ -33,3 +33,4 @@ Using python
 **Credits:**
 * MasterMedo (suggestions on improving code structure for almost every day, hints on implementation for days 2, 4 and 6)
 * stewman241 (for comment: "It's not an equation question. It is a data structure question." on day 9)
+* Bartol Rebernjak (I saw he was using partial sums for day 11)

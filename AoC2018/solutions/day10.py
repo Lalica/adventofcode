@@ -18,12 +18,13 @@ while True:
         maxy = max(maxy, i[1])
 
     if seconds > 1 and abs(maxx - minx) > abs(prev_maxx - prev_minx):
+        print("Day 10 part 1: ")
         for j in range(prev_miny, prev_maxy + 1):
             s = ""
             for i in range(prev_minx, prev_maxx + 1):
                 s += old_stars[(i, j)]
             print(s)
-        print(seconds - 1)
+        print("Day 10 part 2: " + str(seconds - 1))
         exit(1)
     prev_minx, prev_maxx, prev_miny, prev_maxy = minx, maxx, miny, maxy
     old_stars = stars.copy()
