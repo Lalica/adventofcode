@@ -14,7 +14,7 @@ Using python
 | 9 | 375465 | 3037741441 | final, reddit hint for data structure |
 | 10 | GFNKCGGH | 10274 | final |
 | 11 | 44,37 | 235,87,13 | final, bartol hint for partial sums |
-| 12 |  |  |  |
+| 12 | 2281 | 2250000000120 | final, because I'm lazy to make it better  |
 | 13 |  |  |  |
 | 14 |  |  |  |
 | 15 |  |  |  |

@@ -5,7 +5,6 @@ serial = int(open("../inputs/11.txt").read())
 grid_sums, partial_sums = {}, defaultdict(int)
 
 power_level = lambda x, y: ((((x + 10) * y + serial) * (x + 10)) // 10 ** 2 % 10) - 5
-# I(x,y)=i(x,y)+I(x,y-1)+I(x-1,y)-I(x-1,y-1)
 calculate_ps = lambda x, y: (power_level(x + 1, y + 1)
                              + partial_sums[x, y-1] + partial_sums[x-1, y] - partial_sums[x-1, y-1])
 
