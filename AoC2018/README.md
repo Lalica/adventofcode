@@ -16,7 +16,7 @@ Using python
 | 11 | 44,37 | 235,87,13 | final, bartol hint for partial sums |
 | 12 | 2281 | 2250000000120 | final, because I'm too lazy to make it better |
 | 13 | 63,103 | 16,134 | final, because I'm too lazy to make it better |
-| 14 |  |  |  |
+| 14 | 6126491027 | 20191616 | final, but slow |
 | 15 |  |  |  |
 | 16 |  |  |  |
 | 17 |  |  |  |
