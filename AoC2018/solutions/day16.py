@@ -32,20 +32,24 @@ while True:
     if len(possible) >= 3:
         part1 += 1
     possible = possible.difference(done)
-    if op not in numbers and len(possible):
+    if not len(possible):
+        continue
+    if op not in numbers:
         numbers[op] = possible
-    elif len(possible) and len(numbers[op]) != 1:
+    elif len(numbers[op]) != 1:
         numbers[op] = numbers[op].intersection(set(possible))
-    if len(numbers[op]) == 1 and len(possible):
-        num = list(numbers[op])[0]
+    if len(numbers[op]) == 1:
+        num = numbers[op].pop()
+        numbers[op] = [num]
         done.add(num)
         for k in numbers.keys():
             if k != op and num in numbers[k]:
                 numbers[k].remove(num)
+
 print("Day 16 part 1: " + str(part1))
 
 registers = [0] * 4
 for i in data:
     for o, A, B, C in [map(int, i.split())]:
-        registers[C] = operations[list(numbers[o])[0]](registers, A, B)
+        registers[C] = operations[numbers[o][0]](registers, A, B)
 print("Day 16 part 2: " + str(registers[0]))

@@ -29,7 +29,7 @@ print("Day 19 part 1: " + str(registers[0]))
 print("Day 19 part 2: " + str(sum(i for i in range(1, 10551301) if 10551300 % i == 0)))
 
 # registers = [0] * 6
-# registers[1] = 10 551 300  # 2 * 2 * 19 * 11 + (2 * 22 + 20) + (27 * 28 + 29) * 30 * 14 * 32
+# registers[1] = 10551300  # 2 * 2 * 19 * 11 + (2 * 22 + 20) + (27 * 28 + 29) * 30 * 14 * 32
 # registers[5] = 1
 # registers[4] = 1
 # while True:
@@ -41,5 +41,4 @@ print("Day 19 part 2: " + str(sum(i for i in range(1, 10551301) if 10551300 % i 
 #         registers[5] += 1
 #         if registers[5] > registers[1]:
 #             break
-#         else:
-#             registers[4] = 1
+#         registers[4] = 1
