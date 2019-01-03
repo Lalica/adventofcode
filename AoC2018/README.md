@@ -17,11 +17,11 @@ Using python
 | 12 | 2281 | 2250000000120 | final, because I'm too lazy to make it better |
 | 13 | 63,103 | 16,134 | final, because I'm too lazy to make it better |
 | 14 | 6126491027 | 20191616 | final, but slow |
-| 15 |  |  |  |
-| 16 |  |  |  |
+| 15 | 207542 | 64688 | changed the logic so it doesn't work anymore |
+| 16 | 547 | 582 | needs rework |
 | 17 |  |  |  |
 | 18 |  |  |  |
-| 19 |  |  |  |
+| 19 | 2821 | 30529296 | final |
 | 20 |  |  |  |
 | 21 |  |  |  |
 | 22 |  |  |  |
