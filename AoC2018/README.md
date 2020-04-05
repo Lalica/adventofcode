@@ -19,7 +19,7 @@ Using python
 | 14 | 6126491027 | 20191616 | final, but slow |
 | 15 | 207542 | 64688 | final |
 | 16 | 547 | 582 | coubld be better, but final |
-| 17 |  |  |  |
+| 17 | 42429 | 35998 | final |
 | 18 |  |  |  |
 | 19 | 2821 | 30529296 | final |
 | 20 |  |  |  |
