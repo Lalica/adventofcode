@@ -20,7 +20,7 @@ Using python
 | 15 | 207542 | 64688 | final |
 | 16 | 547 | 582 | coubld be better, but final |
 | 17 | 42429 | 35998 | final |
-| 18 |  |  |  |
+| 18 | 588436 | 195290 | not great, but final |
 | 19 | 2821 | 30529296 | final |
 | 20 |  |  |  |
 | 21 |  |  |  |
