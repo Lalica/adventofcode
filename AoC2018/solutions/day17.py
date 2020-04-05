@@ -48,8 +48,8 @@ source.add((y_min, 500))
 while len(source):
     drip()
 
-print(len(water))
-print(len(still_water))
+print('Day 17 part 1: ' +  str(len(water)))
+print('Day 17 part 2: ' +  str(len(still_water)))
 
 with open('test.txt', 'w+') as f:
     f.write(''.join(['.'] * (500 - 350)) + '+' + ''.join(['.'] * (700 - 501)) + '\n')
