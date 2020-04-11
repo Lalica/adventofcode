@@ -25,9 +25,9 @@ Using python
 | 20 | 3835 | 8520 | final |
 | 21 | 12420065 | 1670686 | final |
 | 22 | 11462 | 1054 | final |
-| 23 |  |  |  |
-| 24 |  |  |  |
-| 25 |  |  |  |
+| 23 | 730 | 48202279 | part 2 copied from MasterMedo |
+| 24 | 21891 | 7058 | needs a better code structure |
+| 25 | 388 | Triggered the underflow! | final |
 
 
 **Credits:**
