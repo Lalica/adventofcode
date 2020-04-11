@@ -114,8 +114,9 @@ with open('../inputs/24.txt') as f:
 
         if not boost:
             army = immune_system.values() if immune_system else infection.values()
-            print(sum(group.units for group in army))
+            print('Day 24 part 1: ' + str(sum(group.units for group in army)))
         if immune_system and not_tie:
-            print(sum(group.units for group in immune_system.values()))
+            print('Day 24 part 2: ' +
+                  str(sum(group.units for group in immune_system.values())))
             break
         boost += 1
