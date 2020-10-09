@@ -2,10 +2,10 @@ with open("../inputs/19.txt") as f:
     number = int(f.read())
 
 pow2 = 1
-while pow(2, pow2) < number:
-    pow2 += 1
-pow2 -= 1
-index = (number - pow(2, pow2)) * 2 + 1
+while pow2 < number:
+    pow2 *= 2
+pow2 /= 2
+index = (number - pow2) * 2 + 1
 
 print(f"Day 19 part 1: {index}")
 
@@ -23,12 +23,11 @@ print(f"Day 19 part 1: {index}")
 #    print(f"{i} {numbers[0]}")
 
 pow3 = 1
-while pow(3, pow3) < number:
-    pow3 += 1
-pow3 -= 1
-pivot = pow(3, pow3)
-dif = number - pivot
-index = dif if dif <= pivot else (pivot//2 + dif - pivot) * 2 + 1
+while pow3 < number:
+    pow3 *= 3
+pow3 /= 3
+dif = number - pow3
+index = dif if dif <= pow3 else (pow3//2 + dif - pow3) * 2 + 1
 
 print(f"Day 19 part 2: {index}")
 
