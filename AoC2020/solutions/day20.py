@@ -4,13 +4,13 @@ from math import sqrt
 
 def rotate(tile):
     n = len(tile)
-    new_tile = [['.'for _ in range(n)] for _ in range(n)]
+    new_tile = [["." for _ in range(n)] for _ in range(n)]
 
     for i in range(n):
         for j in range(n):
-            new_tile[j][n-i-1] = tile[i][j]
+            new_tile[j][n - i - 1] = tile[i][j]
 
-    return [''.join(t) for t in new_tile]
+    return ["".join(t) for t in new_tile]
 
 
 def flip(tile):
@@ -21,7 +21,7 @@ def part_1(corners):
     mul = 1
     for c in corners:
         mul *= c
-    print(f'Day 20 part 1: {mul}')
+    print(f"Day 20 part 1: {mul}")
 
 
 def solve(tiles, monster):
@@ -29,7 +29,7 @@ def solve(tiles, monster):
     m = 10 - 2
 
     n = int(sqrt(len(tiles)))
-    grid = [['' for _ in range(n)] for _ in range(n*m)]
+    grid = [["" for _ in range(n)] for _ in range(n * m)]
 
     corners = [n for n, t in neighbours.items() if len(t) == 2]
     part_1(corners)
@@ -40,7 +40,7 @@ def solve(tiles, monster):
 
     place(current, current_t, 0, 0, grid, tiles, neighbours, placed)
 
-    grid = [''.join(g) for g in grid]
+    grid = ["".join(g) for g in grid]
     part2(grid, monster)
 
 
@@ -69,7 +69,7 @@ def place_first_corner(grid, corner, neighbours, m):
                 tile = rotate(tile)
 
     for i in range(m):
-        grid[i][0] = tile[i+1][1:-1]
+        grid[i][0] = tile[i + 1][1:-1]
     return tile
 
 
@@ -92,7 +92,7 @@ def place(cname, ctile, x, y, grid, tiles, neighbours, placed):
             xn = x - 1
 
         for i in range(m):
-            grid[yn+i][xn] = tile[i+1][1:-1]
+            grid[yn + i][xn] = tile[i + 1][1:-1]
 
         placed.append(neighbour)
         place(neighbour, tile, xn, yn, grid, tiles, neighbours, placed)
@@ -105,9 +105,8 @@ def get_neighbours(tiles):
         for name2 in tiles:
             if len(neighbours[name]) == 4:
                 break
-            if len(neighbours[name2]) == 4 or \
-               name2 in neighbours[name] or \
-               name == name2:
+            if (len(neighbours[name2]) == 4 or name2 in neighbours[name]
+                    or name == name2):
                 continue
 
             if detect_match(name, name2, tiles):
@@ -157,12 +156,12 @@ def position_tile(tile, tile2):
 def find_monster(grid, monster):
     n = len(grid)
 
-    for i in range(n-3):
-        for j in range(n-19):
+    for i in range(n - 3):
+        for j in range(n - 19):
             monster_here = True
 
             for mi, mj in monster:
-                if grid[i+mi][j+mj] != '#':
+                if grid[i + mi][j + mj] != "#":
                     monster_here = False
                     break
 
@@ -176,20 +175,20 @@ def rough_waters(grid, monster):
     n = len(grid)
     grid = [[c for c in row] for row in grid]
 
-    for i in range(n-3):
-        for j in range(n-19):
+    for i in range(n - 3):
+        for j in range(n - 19):
             monster_here = True
 
             for mi, mj in monster:
-                if grid[i+mi][j+mj] != '#':
+                if grid[i + mi][j + mj] != "#":
                     monster_here = False
                     break
 
             if monster_here:
                 for mi, mj in monster:
-                    grid[i+mi][j+mj] = 'O'
+                    grid[i + mi][j + mj] = "O"
 
-    return len([1 for row in grid for col in row if col == '#'])
+    return len([1 for row in grid for col in row if col == "#"])
 
 
 def part2(grid, monster):
@@ -197,7 +196,7 @@ def part2(grid, monster):
         for _ in range(4):
             if find_monster(grid, monster):
                 cnt = rough_waters(grid, monster)
-                print(f'Day 20 part 2: {cnt}')
+                print(f"Day 20 part 2: {cnt}")
                 return
             grid = rotate(grid)
         grid = flip(grid)
@@ -206,14 +205,31 @@ def part2(grid, monster):
 with open("../inputs/20.txt") as f:
     data = f.read().split("\n\n")
 
-tiles = {int(d.split("\n")[0].split(" ")[1][:-1]): d.strip().split("\n")[1:] for d in data}
-
+tiles = {
+    int(d.split("\n")[0].split(" ")[1][:-1]): d.strip().split("\n")[1:]
+    for d in data
+}
 """
                   #
 #    ##    ##    ###
  #  #  #  #  #  #
 """
-monster = [(1, 0), (2, 1), (2, 4), (1, 5), (1, 6), (2, 7), (2, 10), (1, 11),
-           (1, 12), (2, 13), (2, 16), (1, 17), (1, 18), (1, 19), (0, 18)]
+monster = [
+    (1, 0),
+    (2, 1),
+    (2, 4),
+    (1, 5),
+    (1, 6),
+    (2, 7),
+    (2, 10),
+    (1, 11),
+    (1, 12),
+    (2, 13),
+    (2, 16),
+    (1, 17),
+    (0, 18),
+    (1, 18),
+    (1, 19),
+]
 
 solve(tiles, monster)
