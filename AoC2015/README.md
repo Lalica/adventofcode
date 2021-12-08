@@ -27,4 +27,4 @@ Using python
 | 22 | 900 | 1216 | could be cleaner |
 | 23 | 170 | 247 | final |
 | 24 | 10439961859 | 72050269 | final |
-| 25 | 2650453 | started the weather machine | final |
+| 25 | 2650453 | Started the weather machine! | final |
