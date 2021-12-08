@@ -21,10 +21,10 @@ Using python
 | 16 | 40 | 241 | final |
 | 17 | 1638 | 17 | final |
 | 18 | 768 | 781 | final |
-| 19 | 576 |  |  |
+| 19 | 576 | 207 | final |
 | 20 | 786240 | 831600 | final |
 | 21 | 78 | 148 | could be better |
 | 22 | 900 | 1216 | could be cleaner |
-| 23 |  |  |  |
-| 24 |  |  |  |
-| 25 |  |  |  |
+| 23 | 170 | 247 | final |
+| 24 | 10439961859 | 72050269 | final |
+| 25 | 2650453 | started the weather machine | final |

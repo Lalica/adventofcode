@@ -1,35 +1,38 @@
-def replace(m, x, y, s):
-    index = m.find(x, s)
-    if index == -1:
-        return
-    results.add(m[:index] + y + m[index + len(x):])
-    replace(m, x, y, index + 1)
+import re
+
+
+def findall(pattern, string):
+    start_index = string.find(pattern)
+    while start_index != -1:
+        yield start_index
+        start_index = string.find(pattern, start_index + 1)
+
+
+def replace_all(molecule, x, y):
+    indexes = findall(x, molecule)
+
+    new_molecules = set()
+    for index in indexes:
+        new_molecules.add(molecule[:index] + y + molecule[index + len(x):])
+
+    return new_molecules
 
 
 with open("../inputs/19.txt") as f:
-    input = [i.split(" => ") for i in f.read().strip().splitlines()]
-    molecule = input.pop(-1)[0]
-    input.pop(-1)
+    formulas, molecule = f.read().split('\n\n')
+    formulas = [formula.split(" => ") for formula in formulas.split('\n')]
 
 results = set()
-for i in input:
-    replace(molecule, i[0], i[1], 0)
+for formula in formulas:
+    results = results.union(replace_all(molecule, formula[0], formula[1]))
 
-print("Day 19 part 1: " + str(len(results)))
+print(f"Day 19 part 1: {len(results)}")
 
-results, steps, newResults, flag = set(), 0, set(), 0
-newResults.add(molecule)
+molecule = molecule.replace("Rn", "(")
+molecule = molecule.replace("Ar", ")")
+molecule = molecule.replace("Y", ",")
+molecule = re.sub(r"[A-Z][a-z]?", r"X", molecule)
 
-while 1:
-    for r in newResults:
-        for i in input:
-            replace(r, i[1], i[0], 0)
-        if "e" in results:
-            flag = 1
-            break
-    newResults = results - newResults
-    steps += 1
-    if flag:
-        break
+num_transitions = molecule.count("X") - molecule.count(",") - 1
 
-print("Day 19 part 2: " + str(steps))
+print(f"Day 19 part 2: {num_transitions}")
