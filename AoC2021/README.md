@@ -12,3 +12,4 @@ Using python
 |   7 | The Treachery of Whales | 336120 | 96864235 |
 |   8 | Seven Segment Search | 375 | 1019355 |
 |   9 | Smoke Basin | 425 | 1135260 |
+|  10 | Syntax Scoring | 318081 | 4361305341 |
