@@ -13,3 +13,4 @@ Using python
 |   8 | Seven Segment Search | 375 | 1019355 |
 |   9 | Smoke Basin | 425 | 1135260 |
 |  10 | Syntax Scoring | 318081 | 4361305341 |
+|  11 | Dumbo Octopus | 1739 | 324 |
