@@ -14,3 +14,4 @@ Using python
 |   9 | Smoke Basin | 425 | 1135260 |
 |  10 | Syntax Scoring | 318081 | 4361305341 |
 |  11 | Dumbo Octopus | 1739 | 324 |
+|  12 | Passage Pathing | 3230 | 83475 |
