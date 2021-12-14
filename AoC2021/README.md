@@ -16,3 +16,4 @@ Using python
 |  11 | Dumbo Octopus | 1739 | 324 |
 |  12 | Passage Pathing | 3230 | 83475 |
 |  13 | Transparent Origami | 602 | CAFJHZCK |
+|  14 | Extended Polymerization | 2899 | 3528317079545 |
