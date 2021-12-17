@@ -19,3 +19,4 @@ Using python
 |  14 | Extended Polymerization | 2899 | 3528317079545 |
 |  15 | Chiton | 373 | 2868 |
 |  16 | Packet Decoder | 843 | 5390807940351 |
+|  17 | Trick Shot | 3655 | 1447 |
