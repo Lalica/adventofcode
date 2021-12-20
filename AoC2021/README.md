@@ -22,3 +22,4 @@ Using python
 |  17 | Trick Shot | 3655 | 1447 |
 |  18 | Snailfish | 4347 | 4721 |
 |  19 | Beacon Scanner | 398 | 10965 |
+|  20 | Trench Map | 5400 | 18989 |
