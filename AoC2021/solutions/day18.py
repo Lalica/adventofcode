@@ -1,11 +1,11 @@
 from copy import deepcopy
 
 
-def add_num(num, n, index):
-    if isinstance(num, list) and isinstance(num[index], int):
-        num[index] += n
+def add_num(num, n, i):
+    if isinstance(num, list) and isinstance(num[i], int):
+        num[i] += n
     else:
-        add_num(num[index], n, index)
+        add_num(num[i], n, i)
 
 
 def expload(num, depth=1):
@@ -18,19 +18,22 @@ def expload(num, depth=1):
 
     for i in [0, 1]:
         left, right, exploaded = expload(num[i], depth + 1)
-        lr = [left, right]
+
+        this_side, other_side = [right, left] if i else [left, right]
+        return_lr = [[left, -1], [-1, right]]
+
         if exploaded:
             return left, right, exploaded
         if left != -1 and right != -1:
             num[i] = 0
-        if lr[not i] != -1:
+        if other_side != -1:
             if isinstance(num[not i], int):
-                num[not i] += lr[not i]
+                num[not i] += other_side
             else:
-                add_num(num[not i], lr[not i], i)
-            return left if not i else -1, right if i else -1, lr[i] == -1
-        if lr[i] != -1:
-            return left if not i else -1, right if i else -1, False
+                add_num(num[not i], other_side, i)
+            return *return_lr[i], this_side == -1
+        if this_side != -1:
+            return *return_lr[i], False
 
     return -1, -1, False
 
@@ -63,9 +66,8 @@ def add_and_reduce(num1, num2):
         left, right, exploaded = expload(sum_)
         if exploaded or left != -1 or right != -1:
             continue
-        if split(sum_):
-            continue
-        break
+        if not split(sum_):
+            break
     return sum_
 
 
@@ -75,7 +77,6 @@ with open("../inputs/18.txt") as f:
 sum_ = numbers[0]
 for num in numbers[1:]:
     sum_ = add_and_reduce(sum_, num)
-
 print(f"Day 18 part 1: {magnitude(sum_)}")
 
 max_ = 0
@@ -83,5 +84,4 @@ for i in range(len(numbers)):
     for j in range(len(numbers)):
         if i != j:
             max_ = max(max_, magnitude(add_and_reduce(numbers[i], numbers[j])))
-
 print(f"Day 18 part 2: {max_}")
