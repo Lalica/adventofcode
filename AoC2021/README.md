@@ -23,3 +23,4 @@ Using python
 |  18 | Snailfish | 4347 | 4721 |
 |  19 | Beacon Scanner | 398 | 10965 |
 |  20 | Trench Map | 5400 | 18989 |
+|  21 | Dirac Dice | 506466 | 632979211251440 |
