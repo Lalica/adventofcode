@@ -24,3 +24,4 @@ Using python
 |  19 | Beacon Scanner | 398 | 10965 |
 |  20 | Trench Map | 5400 | 18989 |
 |  21 | Dirac Dice | 506466 | 632979211251440 |
+|  22 | Reactor Reboot | 623748 | 1227345351869476 |
