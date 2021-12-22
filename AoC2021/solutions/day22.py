@@ -80,7 +80,7 @@ def apply_instructions(instructions):
                 new_cubes.append(cube1)
         cubes = new_cubes
         if switch:
-            cubes.append(cube2)  # TODO copy cube2 if again iter instructions
+            cubes.append(cube2)
 
     return cubes
 
@@ -214,9 +214,9 @@ def sections(cube1, cube2):
     s4 = [x2m, x2M, y1m, y2m-1, z1m, z1M]
     s5 = [x2m, x2M, y2m, y2M, z2M+1, z1M]
     s6 = [x2m, x2M, y2m, y2M, z1m, z2m-1]
-    s3m = [x2m, x2M, y2m, y1M, z2M+1, z1M]  # s5 ako y1M == y2M
-    s1m = [x1m, x2M, y1m, y2m-1, z1m, z1M]  # s4 ako x1m == x2m
-    s1mm = [x1m, x2M, y2m, y1M, z2M+1, z1M]  # s5 ako y1m == y2m i x1m == x2m
+    s3m = [x2m, x2M, y2m, y1M, z2M+1, z1M]  # s5 if y1M == y2M
+    s1m = [x1m, x2M, y1m, y2m-1, z1m, z1M]  # s4 if x1m == x2m
+    s1mm = [x1m, x2M, y2m, y1M, z2M+1, z1M]  # s5 if y1m == y2m and x1m == x2m
 
     return [s1, s2, s3, s4, s5, s6, s3m, s1m, s1mm]
 
@@ -229,11 +229,13 @@ with open("../inputs/22.txt") as f:
             [switch == "on", list(map(int, re.findall(r"[-\d]+", ranges)))]
         )
 
+# generate inverse rotations
 # cube = [-5, -2, 3, 7, -1, 21]
-# print(cube)
 # for r in rotations:
 #     for r2 in rotations:
 #         if rotate(r2, rotate(r, cube)) == cube:
 #             print(r, r2)
 
-print(reboot(instructions))
+part1_instructions = [i for i in instructions if all(-50 <= n <= 50 for n in i[1])]
+print(f"Day 22 part 1: {reboot(part1_instructions)}")
+print(f"Day 22 part 2: {reboot(instructions)}")
