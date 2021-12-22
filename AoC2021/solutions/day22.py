@@ -12,32 +12,31 @@ def get_num_on(cubes):
         on += (c[1] + 1 - c[0]) * (c[3] + 1 - c[2]) * (c[5] + 1 - c[4])
     return on
 
-
 rotations = {
-        0: lambda x, i, y, j, z, k: [x, i, y, j, z, k],
-        1: lambda x, i, y, j, z, k: [x, i, -y, -j, -z, -k],
-        2: lambda x, i, y, j, z, k: [x, i, z, k, -y, -j],
-        3: lambda x, i, y, j, z, k: [x, i, -z, -k, y, j],
-        4: lambda x, i, y, j, z, k: [-x, -i, y, j, -z, -k],
-        5: lambda x, i, y, j, z, k: [-x, -i, -y, -j, z, k],
-        6: lambda x, i, y, j, z, k: [-x, -i, z, k, y, j],
-        7: lambda x, i, y, j, z, k: [-x, -i, -z, -k, -y, -j],
-        8: lambda x, i, y, j, z, k: [y, j, x, i, -z, -k],
-        9: lambda x, i, y, j, z, k: [y, j, -x, -i, z, k],
-        10: lambda x, i, y, j, z, k: [y, j, z, k, x, i],
-        11: lambda x, i, y, j, z, k: [y, j, -z, -k, -x, -i],
-        12: lambda x, i, y, j, z, k: [-y, -j, x, i, z, k],
-        13: lambda x, i, y, j, z, k: [-y, -j, -x, -i, -z, -k],
-        14: lambda x, i, y, j, z, k: [-y, -j, z, k, -x, -i],
-        15: lambda x, i, y, j, z, k: [-y, -j, -z, -k, x, i],
-        16: lambda x, i, y, j, z, k: [z, k, x, i, y, j],
-        17: lambda x, i, y, j, z, k: [z, k, -x, -i, -y, -j],
-        18: lambda x, i, y, j, z, k: [z, k, y, j, -x, -i],
-        19: lambda x, i, y, j, z, k: [z, k, -y, -j, x, i],
-        20: lambda x, i, y, j, z, k: [-z, -k, x, i, -y, -j],
-        21: lambda x, i, y, j, z, k: [-z, -k, -x, -i, y, j],
-        22: lambda x, i, y, j, z, k: [-z, -k, y, j, x, i],
-        23: lambda x, i, y, j, z, k: [-z, -k, -y, -j, -x, -i],
+        0: lambda x, y, z: [x, y, z],
+        1: lambda x, y, z: [x, -y, -z],
+        2: lambda x, y, z: [x, z, -y],
+        3: lambda x, y, z: [x, -z, y],
+        4: lambda x, y, z: [-x, y, -z],
+        5: lambda x, y, z: [-x, -y, z],
+        6: lambda x, y, z: [-x, z, y],
+        7: lambda x, y, z: [-x, -z, -y],
+        8: lambda x, y, z: [y, x, -z],
+        9: lambda x, y, z: [y, -x, z],
+        10: lambda x, y, z: [y, z, x],
+        11: lambda x, y, z: [y, -z, -x],
+        12: lambda x, y, z: [-y, x, z],
+        13: lambda x, y, z: [-y, -x, -z],
+        14: lambda x, y, z: [-y, z, -x],
+        15: lambda x, y, z: [-y, -z, x],
+        16: lambda x, y, z: [z, x, y],
+        17: lambda x, y, z: [z, -x, -y],
+        18: lambda x, y, z: [z, y, -x],
+        19: lambda x, y, z: [z, -y, x],
+        20: lambda x, y, z: [-z, x, -y],
+        21: lambda x, y, z: [-z, -x, y],
+        22: lambda x, y, z: [-z, y, x],
+        23: lambda x, y, z: [-z, -y, -x],
 }
 inv_rotations = {
     0: 0,
@@ -86,14 +85,15 @@ def apply_instructions(instructions):
 
 
 def rotate(r, cube):
-    c = rotations[r](*cube)
-    if c[0] > c[1]:
-        c[0], c[1] = c[1], c[0]
-    if c[2] > c[3]:
-        c[2], c[3] = c[3], c[2]
-    if c[4] > c[5]:
-        c[4], c[5] = c[5], c[4]
-    return c
+    xm, xM, ym, yM, zm, zM = cube
+    cm = rotations[r](xm, ym, zm)
+    cM = rotations[r](xM, yM, zM)
+
+    for i in range(3):
+        if cm[i] < cM[i]:
+            cm[i], cM[i] = cM[i], cm[i]
+
+    return [num for mM in zip(cm, cM) for num in mM]
 
 
 def split_cube(cube1, cube2):
