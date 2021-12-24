@@ -26,3 +26,4 @@ Using python
 |  21 | Dirac Dice | 506466 | 632979211251440 |
 |  22 | Reactor Reboot | 623748 | 1227345351869476 |
 |  23 | Amphipod | 18051 | 50245 |
+|  24 | Arithmetic Logic Unit | 91699394894995 | 51147191161261 |
