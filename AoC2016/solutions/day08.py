@@ -31,5 +31,4 @@ print(f"Day 8 part 1: {len(screen)}")
 
 print("Day 8 part 2:")
 for j in range(n):
-    line = "".join("#" if (i, j) in screen else " " for i in range(m))
-    print(line)
+    print("".join("#" if (i, j) in screen else " " for i in range(m)))

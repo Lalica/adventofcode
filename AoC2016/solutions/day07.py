@@ -33,14 +33,14 @@ tls = 0
 ssl = 0
 for ip in ips:
     strings = ip.replace("]", "[").split("[")
-    inside = strings[0:len(strings):2]
-    outside = strings[1:len(strings):2]
+    outside = strings[0:len(strings):2]
+    inside = strings[1:len(strings):2]
 
-    if any(abba(s) for s in inside) and not any(abba(s) for s in outside):
+    if any(abba(s) for s in outside) and not any(abba(s) for s in inside):
         tls += 1
 
-    babs = [bab_ for s in inside for bab_ in aba(s)]
-    if babs and any(bab(s, babs) for s in outside):
+    babs = [bab_ for s in outside for bab_ in aba(s)]
+    if babs and any(bab(s, babs) for s in inside):
         ssl += 1
 
 print(f"Day 25 part 1: {tls}")
