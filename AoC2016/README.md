@@ -11,7 +11,7 @@ Using python
 | 6 | Signals and Noise | qrqlznrl | kgzdfaon |
 | 7 | Internet Protocol Version 7 | 110 | 242 |
 | 8 | Two-Factor Authentication | 106 | CFLELOYFCS |
-| 9 |  |  |  |
+| 9 | Explosives in Cyberspace | 138735 | 11125026826 |
 | 10 |  |  |  |
 | 11 |  |  |  |
 | 12 |  |  |  |
