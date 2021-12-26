@@ -12,8 +12,8 @@ Using python
 | 7 | Internet Protocol Version 7 | 110 | 242 |
 | 8 | Two-Factor Authentication | 106 | CFLELOYFCS |
 | 9 | Explosives in Cyberspace | 138735 | 11125026826 |
-| 10 |  |  |  |
-| 11 |  |  |  |
+| 10 | Balance Bots | 73 | 3965 |
+| 11 | Radioisotope Thermoelectric Generators | 37 | 61 |
 | 12 |  |  |  |
 | 13 |  |  |  |
 | 14 |  |  |  |
