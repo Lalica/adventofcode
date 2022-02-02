@@ -17,10 +17,10 @@ Using python
 | 12 | Leonardo's Monorail | 318083 | 9227737 |
 | 13 | A Maze of Twisty Little Cubicles | 96 | 141 |
 | 14 | One-Time Pad | 18626 | 20092 |
-| 15 |  |  |  |
-| 16 |  |  |  |
-| 17 |  |  |  |
-| 18 |  |  |  |
+| 15 | Timing is Everything | 148737 | 2353212 |
+| 16 | Dragon Checksum | 11111000111110000 | 10111100110110100 |
+| 17 | Two Steps Forward | RRRLDRDUDD | 706 |
+| 18 | Like a Rogue | 2035 | 20000577 |
 | 19 | An Elephant Named Joseph | 1816277 | 1410967 |
 | 20 |  |  |  |
 | 21 |  |  |  |
