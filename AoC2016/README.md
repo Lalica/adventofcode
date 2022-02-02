@@ -15,8 +15,8 @@ Using python
 | 10 | Balance Bots | 73 | 3965 |
 | 11 | Radioisotope Thermoelectric Generators | 37 | 61 |
 | 12 | Leonardo's Monorail | 318083 | 9227737 |
-| 13 |  |  |  |
-| 14 |  |  |  |
+| 13 | A Maze of Twisty Little Cubicles | 96 | 141 |
+| 14 | One-Time Pad | 18626 | 20092 |
 | 15 |  |  |  |
 | 16 |  |  |  |
 | 17 |  |  |  |
