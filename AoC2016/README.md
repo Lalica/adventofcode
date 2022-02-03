@@ -25,6 +25,6 @@ Using python
 | 20 | Firewall Rules | 23923783 | 125 |
 | 21 | Scrambled Letters and Hash | bfheacgd | gcehdbfa |
 | 22 | Grid Computing | 1045 | 265 |
-| 23 |  |  |  |
-| 24 |  |  |  |
-| 25 |  |  |  |
+| 23 | Safe Cracking | 11123 | 479007683 |
+| 24 | Duct Spelunking | 474 | 696 |
+| 25 | Clock Signal | 192 | Transmited the Signal! |
