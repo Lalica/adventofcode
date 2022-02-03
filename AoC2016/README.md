@@ -27,4 +27,4 @@ Using python
 | 22 | Grid Computing | 1045 | 265 |
 | 23 | Safe Cracking | 11123 | 479007683 |
 | 24 | Duct Spelunking | 474 | 696 |
-| 25 | Clock Signal | 192 | Transmited the Signal! |
+| 25 | Clock Signal | 192 | Transmitted the Signal! |
