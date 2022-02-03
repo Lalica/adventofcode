@@ -22,9 +22,9 @@ Using python
 | 17 | Two Steps Forward | RRRLDRDUDD | 706 |
 | 18 | Like a Rogue | 2035 | 20000577 |
 | 19 | An Elephant Named Joseph | 1816277 | 1410967 |
-| 20 |  |  |  |
-| 21 |  |  |  |
-| 22 |  |  |  |
+| 20 | Firewall Rules | 23923783 | 125 |
+| 21 | Scrambled Letters and Hash | bfheacgd | gcehdbfa |
+| 22 | Grid Computing | 1045 | 265 |
 | 23 |  |  |  |
 | 24 |  |  |  |
 | 25 |  |  |  |
