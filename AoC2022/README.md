@@ -7,8 +7,8 @@ Using python
 |  2 | Rock Paper Scissors | 9651 | 10560 |
 |  3 | Rucksack Reorganization | 7908 | 2838 |
 |  4 | Camp Cleanup | 595 | 952 |
-|   |  |  |  |
-|   |  |  |  |
+|  5 | Supply Stacks | HBTMTBSDC | PQTJRSHWS |
+|  6 | Tuning Trouble | 1542 | 3153 |
 |   |  |  |  |
 |   |  |  |  |
 |   |  |  |  |
