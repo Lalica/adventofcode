@@ -7,8 +7,8 @@ Using python
 |  2 | 1202 Program Alarm | 4090701 | 6421 |
 |  3 | Crossed Wires | 303 | 11222 |
 |  4 | Secure Container | 1864 | 1258 |
-|   |  |  |  |
-|   |  |  |  |
+|  5 | Sunny with a Chance of Asteroids | 10987514 | 14195011 |
+|  6 | Universal Orbit Map | 273985 | 460 |
 |   |  |  |  |
 |   |  |  |  |
 |   |  |  |  |
