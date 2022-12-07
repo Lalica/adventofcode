@@ -9,7 +9,7 @@ Using python
 |  4 | Camp Cleanup | 595 | 952 |
 |  5 | Supply Stacks | HBTMTBSDC | PQTJRSHWS |
 |  6 | Tuning Trouble | 1542 | 3153 |
-|   |  |  |  |
+|  7 | No Space Left On Device | 1206825 | 9608311 |
 |   |  |  |  |
 |   |  |  |  |
 |   |  |  |  |
