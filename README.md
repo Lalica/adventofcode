@@ -12,4 +12,4 @@ Started in November, 2017 as a way to get more points in a C# course.
 | 2019 | 6 | python |
 | 2020 | 25 | python |
 | 2021 | 25 | python |
-| 2022 | 7 | python |
+| 2022 | 8 | python |
