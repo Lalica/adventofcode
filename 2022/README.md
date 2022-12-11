@@ -13,7 +13,7 @@ Using python
 |  8 | Treetop Tree House | 1803 | 268912 |
 |  9 | Rope Bridge | 6081 | 2487 |
 | 10 | Cathode-Ray Tube | 13680 | PZGPKPEB |
-|  |  |  |  |
+| 11 | Monkey in the Middle | 61503 | 14081365540 |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
