@@ -14,7 +14,7 @@ Using python
 |  9 | Rope Bridge | 6081 | 2487 |
 | 10 | Cathode-Ray Tube | 13680 | PZGPKPEB |
 | 11 | Monkey in the Middle | 61503 | 14081365540 |
-|  |  |  |  |
+| 12 | Hill Climbing Algorithm | 394 | 388 |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
