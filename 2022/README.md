@@ -16,10 +16,10 @@ Using python
 | 11 | Monkey in the Middle | 61503 | 14081365540 |
 | 12 | Hill Climbing Algorithm | 394 | 388 |
 | 13 | Distress Signal | 6478 | 21922 |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
-|  |  |  |  |
+| 14 | Regolith Reservoir | 1061 | 25055 |
+| 15 | Beacon Exclusion Zone |  |  |
+| 16 |  |  |  |
+| 17 |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
