@@ -17,7 +17,7 @@ Using python
 | 12 | Hill Climbing Algorithm | 394 | 388 |
 | 13 | Distress Signal | 6478 | 21922 |
 | 14 | Regolith Reservoir | 1061 | 25055 |
-| 15 | Beacon Exclusion Zone |  |  |
+| 15 | Beacon Exclusion Zone | 5166077 | 13071206703981 |
 | 16 |  |  |  |
 | 17 |  |  |  |
 |  |  |  |  |
