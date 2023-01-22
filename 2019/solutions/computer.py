@@ -25,7 +25,7 @@ def read_file(f):
     return list(map(int, f.read().strip().split(',')))
 
 
-def opcode(data):
+def opcode(data, input_iter=None, output_list=None):
     i = 0
     while i < len(data):
         code, modes = get_code_and_modes(data[i])
@@ -42,10 +42,19 @@ def opcode(data):
         elif code == 2:
             data[c] = a * b
         elif code == 3:
-            num = int(input("Insert number: "))
+            if input_iter is not None:
+                try:
+                    num = next(input_iter)
+                except:
+                    return data
+            else:
+                num = int(input("Insert number: "))
             data[a] = num
         elif code == 4:
-            print(a)
+            if output_list is not None:
+                output_list.append(a)
+            else:
+                print(a)
         elif code == 5:
             if a != 0:
                 i = b - num_params - 1
@@ -59,7 +68,7 @@ def opcode(data):
 
         i += num_params + 1
 
-    return float("inf")
+    return -1
 
 
 def get_params(data, i, num_params, modes):

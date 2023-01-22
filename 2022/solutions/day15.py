@@ -77,3 +77,4 @@ lower, higher = 0, 4000000
 bx, by = find_pos(scan_data, lower, higher)
 part2 = bx * 4000000 + by
 print(f'Day 15 part 2: {part2}')
+# TODO: slove part2 with ranges
